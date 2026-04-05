@@ -12,3 +12,10 @@ for(let i = 0; i < 16; i++) {
     div.setAttribute("class", "line");
     container.appendChild(div);
 }
+
+container.addEventListener("mouseover", (event) => {
+    const target = event.target;
+    if(target.getAttribute("class").includes("pixel"))
+    target.style.backgroundColor = "#0000ff";
+    console.log(target);
+});

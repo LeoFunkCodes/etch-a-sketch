@@ -1,4 +1,5 @@
 const container = document.querySelector("#container");
+const button = document.querySelector("button");
 
 for(let i = 0; i < 16; i++) {
     const div = document.createElement("div");
@@ -15,7 +16,7 @@ for(let i = 0; i < 16; i++) {
 
 container.addEventListener("mouseover", (event) => {
     const target = event.target;
-    if(target.getAttribute("class").includes("pixel"))
-    target.style.backgroundColor = "#0000ff";
-    console.log(target);
+    if(target.classList.contains("pixel")) {
+        target.style.backgroundColor = "#0000ff";
+    }
 });
